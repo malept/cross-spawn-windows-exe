@@ -6,6 +6,8 @@ import * as sinon from "sinon";
 import test from "ava";
 
 const fixturePath = path.resolve(__dirname, "fixtures");
+// Timeout is in ms. For some bizarre reason, macOS Wine in CI takes forever.
+const wineTimeout = process.platform === "darwin" ? 180_000 : 60_000;
 
 // Tests are serial because changing environment variables isn't threadsafe.
 
@@ -46,7 +48,7 @@ test.serial(
 test.serial("runs a Windows binary", async (t) => {
   t.is(process.env.WINE_BINARY, undefined);
   if (!canRunWindowsExeNatively()) {
-    t.timeout(20_000, "wine is taking too long to execute");
+    t.timeout(wineTimeout, "wine is taking too long to execute");
   }
   const output = await spawnExe(path.join(fixturePath, "hello.exe"));
   t.is(output.trim(), "Hello EXE World");
@@ -55,7 +57,7 @@ test.serial("runs a Windows binary", async (t) => {
 test.serial("runs a Windows binary with arguments", async (t) => {
   t.is(process.env.WINE_BINARY, undefined);
   if (!canRunWindowsExeNatively()) {
-    t.timeout(10_000, "wine is taking too long to execute");
+    t.timeout(wineTimeout, "wine is taking too long to execute");
   }
   const output = await spawnExe(path.join(fixturePath, "hello.exe"), [
     "argument.txt",
@@ -69,7 +71,7 @@ test.serial("runs a Windows binary with arguments", async (t) => {
 test.serial("runs a Windows binary with a filename argument", async (t) => {
   t.is(process.env.WINE_BINARY, undefined);
   if (!canRunWindowsExeNatively()) {
-    t.timeout(10_000, "wine is taking too long to execute");
+    t.timeout(wineTimeout, "wine is taking too long to execute");
   }
   const output = await spawnExe(path.join(fixturePath, "hello.exe"), [
     await normalizePath(path.join(fixturePath, "input.txt")),
