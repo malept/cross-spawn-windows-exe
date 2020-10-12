@@ -8,7 +8,7 @@ labels: "enhancement"
 
 <!-- Please ensure you've completed the following steps by replacing [ ] with [x] -->
 
-- [ ] I have read the [contribution documentation](https://github.com/malept/cross-spawn-windows-exe/blob/master/CONTRIBUTING.md) for this project.
+- [ ] I have read the [contribution documentation](https://github.com/malept/cross-spawn-windows-exe/blob/main/CONTRIBUTING.md) for this project.
 - [ ] I have searched the issue tracker for a feature request that matches the one I want to file, without success.
 
 ### Problem Description
