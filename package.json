@@ -71,7 +71,8 @@
     ],
     "require": [
       "ts-node/register"
-    ]
+    ],
+    "timeout": "3m"
   },
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
