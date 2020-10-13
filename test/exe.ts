@@ -5,7 +5,8 @@ import * as path from "path";
 import * as sinon from "sinon";
 import test from "ava";
 
-const fixturePath = path.resolve(__dirname, "fixtures");
+const fixturePath =
+  process.env.CSWE_TEST_FIXTURES || path.resolve(__dirname, "fixtures");
 // Timeout is in ms. For some bizarre reason, macOS Wine in CI takes forever.
 const wineTimeout = process.platform === "darwin" ? 180_000 : 60_000;
 
