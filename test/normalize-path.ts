@@ -4,13 +4,13 @@ import test from "ava";
 
 if (isWSL) {
   test("convertUNIXPathToWindows: converts a UNIX-style path", async (t) => {
-    const actual = await normalizePath("/tmp/foo");
-    t.regex(actual, /\\wsl\$/);
+    const actual = await normalizePath("/mnt/c/Windows");
+    t.is(actual, "C:\\Windows");
   });
 
   test("normalizePath: converts input for WSL", async (t) => {
-    const actual = await normalizePath("/tmp/foo");
-    t.regex(actual, /\\wsl\$/);
+    const actual = await normalizePath("/mnt/c/Windows");
+    t.is(actual, "C:\\Windows");
   });
 } else {
   test("convertUNIXPathToWindows: fails with human-friendly message about missing wslpath", async (t) => {
