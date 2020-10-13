@@ -15,7 +15,7 @@ if (isWSL) {
 } else {
   test("convertUNIXPathToWindows: fails with human-friendly message about missing wslpath", async (t) => {
     await t.throwsAsync(convertUNIXPathToWindows("/tmp/foo"), {
-      message: `Error executing command (wslpath -w /tmp/foo):\nCould not find 'wslpath' in any of the directories listed in the PATH environment variable, which is needed to convert WSL paths to Windows-style paths.`,
+      message: /Error executing command \(wslpath -w \/tmp\/foo\):\nCould not find 'wslpath' in any of the directories listed in the PATH environment variable, which is needed to convert WSL paths to Windows-style paths/,
     });
   });
 
