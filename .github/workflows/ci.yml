@@ -50,7 +50,7 @@ jobs:
           CI_OS: ${{ matrix.os }}
           NODE_VERSION: ${{ matrix.node-version }}
 
-  build-wsl:
+  build-wsl1:
     defaults:
       run:
         shell: wsl-bash {0}
