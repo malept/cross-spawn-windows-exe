@@ -3,7 +3,8 @@ import { determineDotNetWrapper, spawnDotNet } from "../src/dotnet";
 import { normalizePath } from "../src/normalize-path";
 import test from "ava";
 
-const fixturePath = path.resolve(__dirname, "fixtures");
+const fixturePath =
+  process.env.CSWE_TEST_FIXTURES || path.resolve(__dirname, "fixtures");
 
 // Tests are serial because changing environment variables isn't threadsafe.
 
