@@ -1,4 +1,5 @@
 export {
+  canRunWindowsExeNatively,
   CrossSpawnExeOptions,
   DetermineWrapperFunction,
   spawnWrapper as spawn,
