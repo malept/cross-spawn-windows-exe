@@ -62,7 +62,7 @@ jobs:
       - name: Fix git checkout line endings
         run: git config --global core.autocrlf input
         shell: pwsh
-      - uses: Vampire/setup-wsl@v1
+      - uses: malept/setup-wsl@malept/chore/upgrade-actions-core-1.2.6
       - name: WSL kernel version
         run: uname --kernel-release
       - uses: actions/checkout@v2
