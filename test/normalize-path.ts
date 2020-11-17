@@ -12,6 +12,11 @@ if (isWSL) {
     const actual = await normalizePath("/mnt/c/Windows");
     t.is(actual, "C:\\Windows");
   });
+
+  test("normalizePath: converts input with spaces for WSL", async (t) => {
+    const actual = await normalizePath("/mnt/c/Program Files");
+    t.is(actual, "C:\\Program Files");
+  });
 } else {
   test("convertUNIXPathToWindows: fails with human-friendly message about missing wslpath", async (t) => {
     await t.throwsAsync(convertUNIXPathToWindows("/tmp/foo"), {
