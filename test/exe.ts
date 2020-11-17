@@ -82,3 +82,20 @@ test.serial("runs a Windows binary with a filename argument", async (t) => {
     "Hello EXE World, arguments passed\nInput\nFile"
   );
 });
+
+test.serial(
+  "runs a Windows binary with a filename argument containing a space",
+  async (t) => {
+    t.is(process.env.WINE_BINARY, undefined);
+    if (!canRunWindowsExeNatively()) {
+      t.timeout(wineTimeout, "wine is taking too long to execute");
+    }
+    const output = await spawnExe(path.join(fixturePath, "hello.exe"), [
+      await normalizePath(path.join(fixturePath, "input with space.txt")),
+    ]);
+    t.is(
+      output.trim().replace(/\r/g, ""),
+      "Hello EXE World, arguments passed\nInput\nFile With Space"
+    );
+  }
+);
