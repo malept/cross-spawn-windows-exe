@@ -3,7 +3,7 @@
 > Cross-platform support for running Windows executables via Node.js.
 
 [![CI](https://github.com/malept/cross-spawn-windows-exe/workflows/CI/badge.svg)](https://github.com/malept/cross-spawn-windows-exe/actions?query=workflow%3ACI)
-[![codecov](https://codecov.io/gh/malept/cross-spawn-windows-exe/branch/master/graph/badge.svg)](https://codecov.io/gh/malept/cross-spawn-windows-exe)
+[![codecov](https://codecov.io/gh/malept/cross-spawn-windows-exe/branch/main/graph/badge.svg)](https://codecov.io/gh/malept/cross-spawn-windows-exe)
 
 Utilizes [`@malept/cross-spawn-promise`](https://npm.im/@malept/cross-spawn-promise) (and by
 extension, [`cross-spawn`](https://npm.im/cross-spawn)) to execute Windows executables regardless
