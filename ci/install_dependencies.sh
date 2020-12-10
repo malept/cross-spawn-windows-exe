@@ -7,7 +7,7 @@ case "$(uname -s)" in
     sudo apt-get install --yes mono-devel wine-stable
     ;;
   Darwin)
-    brew cask install xquartz wine-stable
+    brew install --cask xquartz wine-stable
     wine64 hostname
     ;;
 esac

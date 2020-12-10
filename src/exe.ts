@@ -7,7 +7,7 @@ function installInstructions(): string {
     case "win32":
       return "No wrapper necessary";
     case "darwin":
-      return "Run `brew cask install wine-stable` to install 64-bit wine on macOS via Homebrew.";
+      return "Run `brew install --cask wine-stable` to install 64-bit wine on macOS via Homebrew.";
     case "linux":
       return "Consult your Linux distribution's package manager to determine how to install Wine.";
     /* istanbul ignore next */
