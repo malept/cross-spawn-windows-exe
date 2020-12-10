@@ -1,6 +1,6 @@
 {
   "name": "cross-spawn-windows-exe",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Cross-platform support for running Windows executables",
   "main": "dist/src/index.js",
   "files": [
