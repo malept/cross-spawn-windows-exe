@@ -1,0 +1,390 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>cross-spawn-windows-exe</title>
+	<meta name="description" content="Documentation for cross-spawn-windows-exe">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">cross-spawn-windows-exe</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<h1>Project cross-spawn-windows-exe</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias"><a href="modules.html#crossspawnexeoptions" class="tsd-kind-icon">Cross<wbr>Spawn<wbr>Exe<wbr>Options</a></li>
+								<li class="tsd-kind-type-alias"><a href="modules.html#determinewrapperfunction" class="tsd-kind-icon">Determine<wbr>Wrapper<wbr>Function</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function"><a href="modules.html#canrunwindowsexenatively" class="tsd-kind-icon">can<wbr>Run<wbr>Windows<wbr>Exe<wbr>Natively</a></li>
+								<li class="tsd-kind-function"><a href="modules.html#normalizepath" class="tsd-kind-icon">normalize<wbr>Path</a></li>
+								<li class="tsd-kind-function"><a href="modules.html#spawn" class="tsd-kind-icon">spawn</a></li>
+								<li class="tsd-kind-function"><a href="modules.html#spawndotnet" class="tsd-kind-icon">spawn<wbr>Dot<wbr>Net</a></li>
+								<li class="tsd-kind-function"><a href="modules.html#spawnexe" class="tsd-kind-icon">spawn<wbr>Exe</a></li>
+								<li class="tsd-kind-function"><a href="modules.html#spawnwrapperfromfunction" class="tsd-kind-icon">spawn<wbr>Wrapper<wbr>From<wbr>Function</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="crossspawnexeoptions" class="tsd-anchor"></a>
+					<h3>Cross<wbr>Spawn<wbr>Exe<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">Cross<wbr>Spawn<wbr>Exe<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">CrossSpawnOptions</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>wrapperCommand<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>wrapperInstructions<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/62d5951/src/wrapper.ts#L43">wrapper.ts:43</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An extension to <code>CrossSpawnOptions</code> to optionally specify a custom wrapper command and
+							instructions to install the wrapper.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="determinewrapperfunction" class="tsd-anchor"></a>
+					<h3>Determine<wbr>Wrapper<wbr>Function</h3>
+					<div class="tsd-signature tsd-kind-icon">Determine<wbr>Wrapper<wbr>Function<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>customPath<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/62d5951/src/wrapper.ts#L37">wrapper.ts:37</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A function which determines the wrapper path or binary to use in [[spawnWrapper]].</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>param</dt>
+							<dd><p>The path specified by <a href="modules.html#crossspawnexeoptions">CrossSpawnExeOptions.wrapperCommand</a>, usually
+								prioritized over other paths/binaries in the function.</p>
+							</dd>
+						</dl>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>customPath<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> customPath: <span class="tsd-signature-type">string</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="canrunwindowsexenatively" class="tsd-anchor"></a>
+					<h3>can<wbr>Run<wbr>Windows<wbr>Exe<wbr>Natively</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">can<wbr>Run<wbr>Windows<wbr>Exe<wbr>Natively<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/62d5951/src/wrapper.ts#L11">wrapper.ts:11</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="normalizepath" class="tsd-anchor"></a>
+					<h3>normalize<wbr>Path</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">normalize<wbr>Path<span class="tsd-signature-symbol">(</span>pathToNormalize<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/62d5951/src/normalize-path.ts#L29">normalize-path.ts:29</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Converts a UNIX-style path to a Windows-style path if run in a WSL environment.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>pathToNormalize: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="spawn" class="tsd-anchor"></a>
+					<h3>spawn</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">spawn<span class="tsd-signature-symbol">(</span>cmd<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">CrossSpawnArgs</span>, options<span class="tsd-signature-symbol">?: </span><a href="modules.html#crossspawnexeoptions" class="tsd-signature-type">CrossSpawnExeOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/62d5951/src/wrapper.ts#L80">wrapper.ts:80</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>A wrapper for <code>cross-spawn</code>&#39;s <code>spawn</code> function that wraps the <code>cmd</code> with <code>wrapperCommand</code> if it
+									is specified.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>cmd: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> args: <span class="tsd-signature-type">CrossSpawnArgs</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="modules.html#crossspawnexeoptions" class="tsd-signature-type">CrossSpawnExeOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="spawndotnet" class="tsd-anchor"></a>
+					<h3>spawn<wbr>Dot<wbr>Net</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">spawn<wbr>Dot<wbr>Net<span class="tsd-signature-symbol">(</span>cmd<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">CrossSpawnArgs</span>, options<span class="tsd-signature-symbol">?: </span><a href="modules.html#crossspawnexeoptions" class="tsd-signature-type">CrossSpawnExeOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/62d5951/src/dotnet.ts#L29">dotnet.ts:29</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Spawn a .NET executable. On non-Windows platforms, use <a href="https://www.mono-project.com/">Nono</a>
+									to run it.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>cmd: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> args: <span class="tsd-signature-type">CrossSpawnArgs</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="modules.html#crossspawnexeoptions" class="tsd-signature-type">CrossSpawnExeOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="spawnexe" class="tsd-anchor"></a>
+					<h3>spawn<wbr>Exe</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">spawn<wbr>Exe<span class="tsd-signature-symbol">(</span>cmd<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">CrossSpawnArgs</span>, options<span class="tsd-signature-symbol">?: </span><a href="modules.html#crossspawnexeoptions" class="tsd-signature-type">CrossSpawnExeOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/62d5951/src/exe.ts#L50">exe.ts:50</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Spawn a Windows executable. On non-Windows platforms, use <a href="https://www.winehq.org/">Wine</a>
+									to run it.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>cmd: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> args: <span class="tsd-signature-type">CrossSpawnArgs</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="modules.html#crossspawnexeoptions" class="tsd-signature-type">CrossSpawnExeOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="spawnwrapperfromfunction" class="tsd-anchor"></a>
+					<h3>spawn<wbr>Wrapper<wbr>From<wbr>Function</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">spawn<wbr>Wrapper<wbr>From<wbr>Function<span class="tsd-signature-symbol">(</span>wrapperFunction<span class="tsd-signature-symbol">: </span><a href="modules.html#determinewrapperfunction" class="tsd-signature-type">DetermineWrapperFunction</a>, cmd<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">CrossSpawnArgs</span>, options<span class="tsd-signature-symbol">?: </span><a href="modules.html#crossspawnexeoptions" class="tsd-signature-type">CrossSpawnExeOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/62d5951/src/wrapper.ts#L107">wrapper.ts:107</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>A helper variant of [[spawnWrapper]] which uses a <a href="modules.html#determinewrapperfunction">DetermineWrapperFunction</a> to
+									determine <code>wrapperCommand</code>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>wrapperFunction: <a href="modules.html#determinewrapperfunction" class="tsd-signature-type">DetermineWrapperFunction</a></h5>
+								</li>
+								<li>
+									<h5>cmd: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> args: <span class="tsd-signature-type">CrossSpawnArgs</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="modules.html#crossspawnexeoptions" class="tsd-signature-type">CrossSpawnExeOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="current ">
+						<a href="modules.html">Exports</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#crossspawnexeoptions" class="tsd-kind-icon">Cross<wbr>Spawn<wbr>Exe<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#determinewrapperfunction" class="tsd-kind-icon">Determine<wbr>Wrapper<wbr>Function</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#canrunwindowsexenatively" class="tsd-kind-icon">can<wbr>Run<wbr>Windows<wbr>Exe<wbr>Natively</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#normalizepath" class="tsd-kind-icon">normalize<wbr>Path</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#spawn" class="tsd-kind-icon">spawn</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#spawndotnet" class="tsd-kind-icon">spawn<wbr>Dot<wbr>Net</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#spawnexe" class="tsd-kind-icon">spawn<wbr>Exe</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#spawnwrapperfromfunction" class="tsd-kind-icon">spawn<wbr>Wrapper<wbr>From<wbr>Function</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

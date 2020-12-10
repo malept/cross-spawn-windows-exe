@@ -1,0 +1,178 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>cross-spawn-windows-exe</title>
+	<meta name="description" content="Documentation for cross-spawn-windows-exe">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">cross-spawn-windows-exe</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<h1>Project cross-spawn-windows-exe</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#cross-spawn-windows-exe" id="cross-spawn-windows-exe" style="color: inherit; text-decoration: none;">
+					<h1><code>cross-spawn-windows-exe</code></h1>
+				</a>
+				<blockquote>
+					<p>Cross-platform support for running Windows executables via Node.js.</p>
+				</blockquote>
+				<p><a href="https://github.com/malept/cross-spawn-windows-exe/actions?query=workflow%3ACI"><img src="https://github.com/malept/cross-spawn-windows-exe/workflows/CI/badge.svg" alt="CI"></a>
+				<a href="https://codecov.io/gh/malept/cross-spawn-windows-exe"><img src="https://codecov.io/gh/malept/cross-spawn-windows-exe/branch/main/graph/badge.svg" alt="codecov"></a></p>
+				<p>Utilizes <a href="https://npm.im/@malept/cross-spawn-promise"><code>@malept/cross-spawn-promise</code></a> (and by
+					extension, <a href="https://npm.im/cross-spawn"><code>cross-spawn</code></a>) to execute Windows executables regardless
+				of platform.</p>
+				<p>For all platforms, Node 10 or above is required.</p>
+				<p>On non-Windows, non-WSL host systems, the following dependencies are required:</p>
+				<ul>
+					<li>.NET executables: <a href="https://www.mono-project.com/">Mono</a></li>
+					<li>All other Windows executables: <a href="https://www.winehq.org/">Wine</a></li>
+				</ul>
+				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+					<h2>Usage</h2>
+				</a>
+				<p>Using the <code>cross-spawn-windows-exe</code> API is similar in terms of function signature to <code>spawn</code> in
+				<code>@malept/cross-spawn-promise</code>.</p>
+				<a href="#running-a-net-executable" id="running-a-net-executable" style="color: inherit; text-decoration: none;">
+					<h3>Running a .NET executable</h3>
+				</a>
+				<pre><code class="language-javascript"><span style="color: #008000">// Note: top-level await exists in Node &gt;= 14.8.0. In earlier versions of Node, please wrap in an</span>
+<span style="color: #008000">// async function.</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">spawnDotNet</span><span style="color: #000000"> } = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;cross-spawn-windows-exe&quot;</span><span style="color: #000000">);</span>
+
+<span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #795E26">spawnDotNet</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;./hellodotnet.exe&quot;</span><span style="color: #000000">, [</span><span style="color: #A31515">&quot;--arg1&quot;</span><span style="color: #000000">]);</span>
+</code></pre>
+				<a href="#running-a-windows-executable" id="running-a-windows-executable" style="color: inherit; text-decoration: none;">
+					<h3>Running a Windows executable</h3>
+				</a>
+				<pre><code class="language-javascript"><span style="color: #008000">// Note: top-level await exists in Node &gt;= 14.8.0. In earlier versions of Node, please wrap in an</span>
+<span style="color: #008000">// async function.</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">spawnExe</span><span style="color: #000000"> } = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;cross-spawn-windows-exe&quot;</span><span style="color: #000000">);</span>
+
+<span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #795E26">spawnExe</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;./hellowindows.exe&quot;</span><span style="color: #000000">, [</span><span style="color: #A31515">&quot;--arg1&quot;</span><span style="color: #000000">]);</span>
+</code></pre>
+				<a href="#normalizing-paths" id="normalizing-paths" style="color: inherit; text-decoration: none;">
+					<h3>Normalizing Paths</h3>
+				</a>
+				<p>Executables generally can&#39;t handle UNIX-style paths that Windows Subsystem for Linux (WSL) passes
+					in, since it&#39;s a Linux environment. This module provides a function to convert those paths from
+					UNIX-style to Windows-style (via <code>wslpath</code>, which should be installed by default on every WSL
+					distribution), if the host system is determined to be WSL. For non-WSL environments, this is a
+				no-op.</p>
+				<pre><code class="language-javascript"><span style="color: #008000">// Note: top-level await exists in Node &gt;= 14.8.0. In earlier versions of Node, please wrap in an</span>
+<span style="color: #008000">// async function.</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">normalizePath</span><span style="color: #000000">, </span><span style="color: #0070C1">spawnExe</span><span style="color: #000000"> } = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;cross-spawn-windows-exe&quot;</span><span style="color: #000000">);</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">normalizedPath</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #795E26">normalizePath</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;/tmp/foo&quot;</span><span style="color: #000000">);</span>
+<span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #795E26">spawnExe</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;./openfile.exe&quot;</span><span style="color: #000000">, [</span><span style="color: #A31515">&quot;--filename&quot;</span><span style="color: #000000">, </span><span style="color: #001080">normalizedPath</span><span style="color: #000000">]);</span>
+</code></pre>
+				<a href="#legal" id="legal" style="color: inherit; text-decoration: none;">
+					<h2>Legal</h2>
+				</a>
+				<p>This module is licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, version 2.0</a>.
+				See <code>LICENSE</code> for details.</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#crossspawnexeoptions" class="tsd-kind-icon">Cross<wbr>Spawn<wbr>Exe<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#determinewrapperfunction" class="tsd-kind-icon">Determine<wbr>Wrapper<wbr>Function</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#canrunwindowsexenatively" class="tsd-kind-icon">can<wbr>Run<wbr>Windows<wbr>Exe<wbr>Natively</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#normalizepath" class="tsd-kind-icon">normalize<wbr>Path</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#spawn" class="tsd-kind-icon">spawn</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#spawndotnet" class="tsd-kind-icon">spawn<wbr>Dot<wbr>Net</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#spawnexe" class="tsd-kind-icon">spawn<wbr>Exe</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#spawnwrapperfromfunction" class="tsd-kind-icon">spawn<wbr>Wrapper<wbr>From<wbr>Function</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
