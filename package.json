@@ -94,8 +94,7 @@
       "plugin:node/recommended",
       "plugin:prettier/recommended",
       "plugin:promise/recommended",
-      "prettier",
-      "prettier/@typescript-eslint"
+      "prettier"
     ],
     "rules": {
       "node/no-unsupported-features/es-syntax": [
