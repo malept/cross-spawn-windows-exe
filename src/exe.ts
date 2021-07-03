@@ -1,5 +1,6 @@
 import { CrossSpawnArgs } from "@malept/cross-spawn-promise";
 import { CrossSpawnExeOptions, spawnWrapperFromFunction } from "./wrapper";
+import { is64BitArch } from "./arch";
 
 function installInstructions(): string {
   switch (process.platform) {
@@ -36,7 +37,7 @@ export function determineWineWrapper(customWinePath?: string): string {
     return process.env.WINE_BINARY;
   }
 
-  if (process.arch === "x64") {
+  if (is64BitArch(process.arch)) {
     return "wine64";
   }
 
