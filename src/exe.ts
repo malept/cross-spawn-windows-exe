@@ -53,11 +53,7 @@ export async function spawnExe(
   args?: CrossSpawnArgs,
   options?: CrossSpawnExeOptions
 ): Promise<string> {
-  if (!options?.wrapperInstructions) {
-    if (!options) {
-      options = {};
-    }
-    options.wrapperInstructions = exeDependencyInstallInstructions();
-  }
+  options ??= {};
+  options.wrapperInstructions ??= exeDependencyInstallInstructions();
   return spawnWrapperFromFunction(determineWineWrapper, cmd, args, options);
 }
