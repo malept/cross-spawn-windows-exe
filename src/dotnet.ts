@@ -1,6 +1,21 @@
 import { CrossSpawnArgs } from "@malept/cross-spawn-promise";
 import { CrossSpawnExeOptions, spawnWrapperFromFunction } from "./wrapper";
 
+export function dotNetDependencyInstallInstructions(): string {
+  switch (process.platform) {
+    /* istanbul ignore next */
+    case "win32":
+      return "No wrapper necessary";
+    case "darwin":
+      return "Run `brew install mono` to install Mono on macOS via Homebrew.";
+    case "linux":
+      return "Consult your Linux distribution's package manager to determine how to install Mono.";
+    /* istanbul ignore next */
+    default:
+      return "Consult your operating system's package manager to determine how to install Mono.";
+  }
+}
+
 /**
  * Heuristically determine the path to `mono` to use.
  *
@@ -31,5 +46,7 @@ export async function spawnDotNet(
   args?: CrossSpawnArgs,
   options?: CrossSpawnExeOptions
 ): Promise<string> {
+  options ??= {};
+  options.wrapperInstructions ??= dotNetDependencyInstallInstructions();
   return spawnWrapperFromFunction(determineDotNetWrapper, cmd, args, options);
 }
