@@ -62,6 +62,12 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Classes</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-class"><a href="classes/wrappererror.html" class="tsd-kind-icon">Wrapper<wbr>Error</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-type-alias"><a href="modules.html#crossspawnexeoptions" class="tsd-kind-icon">Cross<wbr>Spawn<wbr>Exe<wbr>Options</a></li>
@@ -72,6 +78,8 @@
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function"><a href="modules.html#canrunwindowsexenatively" class="tsd-kind-icon">can<wbr>Run<wbr>Windows<wbr>Exe<wbr>Natively</a></li>
+								<li class="tsd-kind-function"><a href="modules.html#dotnetdependencyinstallinstructions" class="tsd-kind-icon">dot<wbr>Net<wbr>Dependency<wbr>Install<wbr>Instructions</a></li>
+								<li class="tsd-kind-function"><a href="modules.html#exedependencyinstallinstructions" class="tsd-kind-icon">exe<wbr>Dependency<wbr>Install<wbr>Instructions</a></li>
 								<li class="tsd-kind-function"><a href="modules.html#is64bitarch" class="tsd-kind-icon">is64<wbr>Bit<wbr>Arch</a></li>
 								<li class="tsd-kind-function"><a href="modules.html#normalizepath" class="tsd-kind-icon">normalize<wbr>Path</a></li>
 								<li class="tsd-kind-function"><a href="modules.html#spawn" class="tsd-kind-icon">spawn</a></li>
@@ -91,7 +99,7 @@
 					<div class="tsd-signature tsd-kind-icon">Cross<wbr>Spawn<wbr>Exe<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">CrossSpawnOptions</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>wrapperCommand<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>wrapperInstructions<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/f680802/src/wrapper.ts#L43">wrapper.ts:43</a></li>
+							<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/d511bb8/src/wrapper.ts#L43">src/wrapper.ts:43</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -107,7 +115,7 @@
 					<div class="tsd-signature tsd-kind-icon">Determine<wbr>Wrapper<wbr>Function<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>customPath<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/f680802/src/wrapper.ts#L37">wrapper.ts:37</a></li>
+							<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/d511bb8/src/wrapper.ts#L37">src/wrapper.ts:37</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -156,10 +164,56 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/f680802/src/wrapper.ts#L11">wrapper.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/d511bb8/src/wrapper.ts#L11">src/wrapper.ts:11</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="dotnetdependencyinstallinstructions" class="tsd-anchor"></a>
+					<h3>dot<wbr>Net<wbr>Dependency<wbr>Install<wbr>Instructions</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">dot<wbr>Net<wbr>Dependency<wbr>Install<wbr>Instructions<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/d511bb8/src/dotnet.ts#L8">src/dotnet.ts:8</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Installation instructions for dependencies related to running .NET executables on the
+									host platform (i.e., Mono on non-Windows platforms).</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="exedependencyinstallinstructions" class="tsd-anchor"></a>
+					<h3>exe<wbr>Dependency<wbr>Install<wbr>Instructions</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">exe<wbr>Dependency<wbr>Install<wbr>Instructions<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/d511bb8/src/exe.ts#L9">src/exe.ts:9</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Installation instructions for dependencies related to running Windows executables on the
+									host platform (i.e., Wine on non-Windows platforms).</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -173,7 +227,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/f680802/src/arch.ts#L9">arch.ts:9</a></li>
+									<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/d511bb8/src/arch.ts#L9">src/arch.ts:9</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -204,7 +258,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/f680802/src/normalize-path.ts#L29">normalize-path.ts:29</a></li>
+									<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/d511bb8/src/normalize-path.ts#L29">src/normalize-path.ts:29</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -232,7 +286,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/f680802/src/wrapper.ts#L80">wrapper.ts:80</a></li>
+									<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/d511bb8/src/wrapper.ts#L80">src/wrapper.ts:80</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -267,7 +321,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/f680802/src/dotnet.ts#L29">dotnet.ts:29</a></li>
+									<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/d511bb8/src/dotnet.ts#L48">src/dotnet.ts:48</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -302,7 +356,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/f680802/src/exe.ts#L51">exe.ts:51</a></li>
+									<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/d511bb8/src/exe.ts#L55">src/exe.ts:55</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -337,7 +391,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/f680802/src/wrapper.ts#L107">wrapper.ts:107</a></li>
+									<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/d511bb8/src/wrapper.ts#L105">src/wrapper.ts:105</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -377,6 +431,9 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class">
+						<a href="classes/wrappererror.html" class="tsd-kind-icon">Wrapper<wbr>Error</a>
+					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="modules.html#crossspawnexeoptions" class="tsd-kind-icon">Cross<wbr>Spawn<wbr>Exe<wbr>Options</a>
 					</li>
@@ -385,6 +442,12 @@
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="modules.html#canrunwindowsexenatively" class="tsd-kind-icon">can<wbr>Run<wbr>Windows<wbr>Exe<wbr>Natively</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#dotnetdependencyinstallinstructions" class="tsd-kind-icon">dot<wbr>Net<wbr>Dependency<wbr>Install<wbr>Instructions</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#exedependencyinstallinstructions" class="tsd-kind-icon">exe<wbr>Dependency<wbr>Install<wbr>Instructions</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="modules.html#is64bitarch" class="tsd-kind-icon">is64<wbr>Bit<wbr>Arch</a>
@@ -413,6 +476,9 @@
 	<div class="container">
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+			</ul>
 		</div>
 	</div>
 </footer>
