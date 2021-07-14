@@ -1,6 +1,10 @@
 import { CrossSpawnArgs } from "@malept/cross-spawn-promise";
 import { CrossSpawnExeOptions, spawnWrapperFromFunction } from "./wrapper";
 
+/**
+ * Installation instructions for dependencies related to running .NET executables on the
+ * host platform (i.e., Mono on non-Windows platforms).
+ */
 export function dotNetDependencyInstallInstructions(): string {
   switch (process.platform) {
     /* istanbul ignore next */

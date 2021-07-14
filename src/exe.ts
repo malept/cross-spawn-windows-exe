@@ -2,6 +2,10 @@ import { CrossSpawnArgs } from "@malept/cross-spawn-promise";
 import { CrossSpawnExeOptions, spawnWrapperFromFunction } from "./wrapper";
 import { is64BitArch } from "./arch";
 
+/**
+ * Installation instructions for dependencies related to running Windows executables on the
+ * host platform (i.e., Wine on non-Windows platforms).
+ */
 export function exeDependencyInstallInstructions(): string {
   switch (process.platform) {
     /* istanbul ignore next */
