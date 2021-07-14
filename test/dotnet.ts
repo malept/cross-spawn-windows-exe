@@ -5,7 +5,7 @@ import {
   spawnDotNet,
 } from "../src/dotnet";
 import { normalizePath } from "../src/normalize-path";
-import { WrapperError } from "../src/wrapper";
+import { canRunWindowsExeNatively, WrapperError } from "../src/wrapper";
 import test from "ava";
 
 const fixturePath =
@@ -65,34 +65,36 @@ test.serial("runs a dotnet binary with a filename argument", async (t) => {
   );
 });
 
-test.serial(
-  "fails to run a dotnet binary with the default wrapper instructions",
-  async (t) => {
-    process.env.MONO_BINARY = "mono-nonexistent";
-    await t.throwsAsync(
-      async () => spawnDotNet(path.join(fixturePath, "hello.dotnet.exe")),
-      {
-        instanceOf: WrapperError,
-        message: `Wrapper command 'mono-nonexistent' not found on the system. ${dotNetDependencyInstallInstructions()}`,
-      }
-    );
-  }
-);
+if (!canRunWindowsExeNatively()) {
+  test.serial(
+    "fails to run a dotnet binary with the default wrapper instructions",
+    async (t) => {
+      process.env.MONO_BINARY = "mono-nonexistent";
+      await t.throwsAsync(
+        async () => spawnDotNet(path.join(fixturePath, "hello.dotnet.exe")),
+        {
+          instanceOf: WrapperError,
+          message: `Wrapper command 'mono-nonexistent' not found on the system. ${dotNetDependencyInstallInstructions()}`,
+        }
+      );
+    }
+  );
 
-test.serial(
-  "fails to run a dotnet binary with custom wrapper instructions",
-  async (t) => {
-    process.env.MONO_BINARY = "mono-nonexistent";
-    await t.throwsAsync(
-      async () =>
-        spawnDotNet(path.join(fixturePath, "hello.dotnet.exe"), [], {
-          wrapperInstructions: "Custom text.",
-        }),
-      {
-        instanceOf: WrapperError,
-        message:
-          "Wrapper command 'mono-nonexistent' not found on the system. Custom text.",
-      }
-    );
-  }
-);
+  test.serial(
+    "fails to run a dotnet binary with custom wrapper instructions",
+    async (t) => {
+      process.env.MONO_BINARY = "mono-nonexistent";
+      await t.throwsAsync(
+        async () =>
+          spawnDotNet(path.join(fixturePath, "hello.dotnet.exe"), [], {
+            wrapperInstructions: "Custom text.",
+          }),
+        {
+          instanceOf: WrapperError,
+          message:
+            "Wrapper command 'mono-nonexistent' not found on the system. Custom text.",
+        }
+      );
+    }
+  );
+}

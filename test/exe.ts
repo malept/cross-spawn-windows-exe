@@ -87,51 +87,53 @@ test.serial("runs a Windows binary with a filename argument", async (t) => {
   );
 });
 
-test.serial(
-  "runs a Windows binary with a filename argument containing a space",
-  async (t) => {
-    t.is(process.env.WINE_BINARY, undefined);
-    if (!canRunWindowsExeNatively()) {
-      t.timeout(wineTimeout, "wine is taking too long to execute");
+if (!canRunWindowsExeNatively()) {
+  test.serial(
+    "runs a Windows binary with a filename argument containing a space",
+    async (t) => {
+      t.is(process.env.WINE_BINARY, undefined);
+      if (!canRunWindowsExeNatively()) {
+        t.timeout(wineTimeout, "wine is taking too long to execute");
+      }
+      const output = await spawnExe(path.join(fixturePath, "hello.exe"), [
+        await normalizePath(path.join(fixturePath, "input with space.txt")),
+      ]);
+      t.is(
+        output.trim().replace(/\r/g, ""),
+        "Hello EXE World, arguments passed\nInput\nFile With Space"
+      );
     }
-    const output = await spawnExe(path.join(fixturePath, "hello.exe"), [
-      await normalizePath(path.join(fixturePath, "input with space.txt")),
-    ]);
-    t.is(
-      output.trim().replace(/\r/g, ""),
-      "Hello EXE World, arguments passed\nInput\nFile With Space"
-    );
-  }
-);
+  );
 
-test.serial(
-  "fails to run a Windows binary with the default wrapper instructions",
-  async (t) => {
-    process.env.WINE_BINARY = "wine-nonexistent";
-    await t.throwsAsync(
-      async () => spawnExe(path.join(fixturePath, "hello.exe")),
-      {
-        instanceOf: WrapperError,
-        message: `Wrapper command 'wine-nonexistent' not found on the system. ${exeDependencyInstallInstructions()}`,
-      }
-    );
-  }
-);
+  test.serial(
+    "fails to run a Windows binary with the default wrapper instructions",
+    async (t) => {
+      process.env.WINE_BINARY = "wine-nonexistent";
+      await t.throwsAsync(
+        async () => spawnExe(path.join(fixturePath, "hello.exe")),
+        {
+          instanceOf: WrapperError,
+          message: `Wrapper command 'wine-nonexistent' not found on the system. ${exeDependencyInstallInstructions()}`,
+        }
+      );
+    }
+  );
 
-test.serial(
-  "fails to run a Windows binary with custom wrapper instructions",
-  async (t) => {
-    process.env.WINE_BINARY = "wine-nonexistent";
-    await t.throwsAsync(
-      async () =>
-        spawnExe(path.join(fixturePath, "hello.exe"), [], {
-          wrapperInstructions: "Custom text.",
-        }),
-      {
-        instanceOf: WrapperError,
-        message:
-          "Wrapper command 'wine-nonexistent' not found on the system. Custom text.",
-      }
-    );
-  }
-);
+  test.serial(
+    "fails to run a Windows binary with custom wrapper instructions",
+    async (t) => {
+      process.env.WINE_BINARY = "wine-nonexistent";
+      await t.throwsAsync(
+        async () =>
+          spawnExe(path.join(fixturePath, "hello.exe"), [], {
+            wrapperInstructions: "Custom text.",
+          }),
+        {
+          instanceOf: WrapperError,
+          message:
+            "Wrapper command 'wine-nonexistent' not found on the system. Custom text.",
+        }
+      );
+    }
+  );
+}
