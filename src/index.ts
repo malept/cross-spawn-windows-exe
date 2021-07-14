@@ -10,4 +10,4 @@ export { is64BitArch } from "./arch";
 export { normalizePath } from "./normalize-path";
 
 export { spawnDotNet } from "./dotnet";
-export { spawnExe } from "./exe";
+export { exeDependencyInstallInstructions, spawnExe } from "./exe";
