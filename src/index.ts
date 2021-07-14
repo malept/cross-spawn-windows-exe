@@ -4,6 +4,7 @@ export {
   DetermineWrapperFunction,
   spawnWrapper as spawn,
   spawnWrapperFromFunction,
+  WrapperError,
 } from "./wrapper";
 
 export { is64BitArch } from "./arch";
