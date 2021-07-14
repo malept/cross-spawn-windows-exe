@@ -82,9 +82,7 @@ export async function spawnWrapper(
   args?: CrossSpawnArgs,
   options?: CrossSpawnExeOptions
 ): Promise<string> {
-  if (!options) {
-    options = {} as CrossSpawnExeOptions;
-  }
+  options ??= {} as CrossSpawnExeOptions;
 
   const { wrapperCommand, wrapperInstructions, ...crossSpawnOptions } = options;
   if (wrapperCommand) {

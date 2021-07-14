@@ -2,7 +2,11 @@ import { CrossSpawnArgs } from "@malept/cross-spawn-promise";
 import { CrossSpawnExeOptions, spawnWrapperFromFunction } from "./wrapper";
 import { is64BitArch } from "./arch";
 
-function installInstructions(): string {
+/**
+ * Installation instructions for dependencies related to running Windows executables on the
+ * host platform (i.e., Wine on non-Windows platforms).
+ */
+export function exeDependencyInstallInstructions(): string {
   switch (process.platform) {
     /* istanbul ignore next */
     case "win32":
@@ -53,11 +57,7 @@ export async function spawnExe(
   args?: CrossSpawnArgs,
   options?: CrossSpawnExeOptions
 ): Promise<string> {
-  if (!options?.wrapperInstructions) {
-    if (!options) {
-      options = {};
-    }
-    options.wrapperInstructions = installInstructions();
-  }
+  options ??= {};
+  options.wrapperInstructions ??= exeDependencyInstallInstructions();
   return spawnWrapperFromFunction(determineWineWrapper, cmd, args, options);
 }
