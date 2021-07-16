@@ -5,6 +5,10 @@ updates:
     # Check the npm registry for updates every weekday
     schedule:
       interval: "daily"
+    ignore:
+      # Does not work with typedoc 0.20.x
+      - dependency-name: "typescript"
+        versions: ["^4.3.0"]
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
