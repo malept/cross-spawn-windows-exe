@@ -68,7 +68,7 @@ jobs:
       - name: Test
         run: yarn coverage
       - name: Upload code coverage to Codecov
-        uses: codecov/codecov-action@v2.0.1
+        uses: codecov/codecov-action@v2.0.2
         with:
           file: ./coverage/lcov.info
           env_vars: CI_OS,NODE_VERSION
@@ -114,7 +114,7 @@ jobs:
       - name: Test
         run: cd $HOME/cross-spawn-windows-exe && CSWE_TEST_FIXTURES=${{ steps.wsl-workspace.outputs.dir }}/test/fixtures yarn coverage && mv coverage ${{ steps.wsl-workspace.outputs.dir }}/
       - name: Upload code coverage to Codecov
-        uses: codecov/codecov-action@v2.0.1
+        uses: codecov/codecov-action@v2.0.2
         with:
           file: ./coverage/lcov.info
           env_vars: CI_OS,NODE_VERSION
