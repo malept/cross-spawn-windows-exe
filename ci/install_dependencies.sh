@@ -4,6 +4,7 @@ set -e
 
 case "$(uname -s)" in
   Linux)
+    sudo apt-get update
     sudo apt-get install --yes mono-devel wine-stable
     ;;
   Darwin)
