@@ -9,7 +9,7 @@ Utilizes [`@malept/cross-spawn-promise`](https://npm.im/@malept/cross-spawn-prom
 extension, [`cross-spawn`](https://npm.im/cross-spawn)) to execute Windows executables regardless
 of platform.
 
-For all platforms, Node 10 or above is required.
+For all platforms, Node 12.13.0 (LTS) or above is required.
 
 On non-Windows, non-WSL host systems, the following dependencies are required:
 
