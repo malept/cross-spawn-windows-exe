@@ -55,7 +55,7 @@
 					<a href="../modules.html">cross-spawn-windows-exe</a>
 				</li>
 				<li>
-					<a href="wrappererror.html">WrapperError</a>
+					<a href="WrapperError.html">WrapperError</a>
 				</li>
 			</ul>
 			<h1>Class WrapperError</h1>
@@ -92,23 +92,23 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="wrappererror.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="WrapperError.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-inherited tsd-is-external">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="wrappererror.html#message" class="tsd-kind-icon">message</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="wrappererror.html#name" class="tsd-kind-icon">name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="wrappererror.html#stack" class="tsd-kind-icon">stack</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external"><a href="wrappererror.html#preparestacktrace" class="tsd-kind-icon">prepare<wbr>Stack<wbr>Trace</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external"><a href="wrappererror.html#stacktracelimit" class="tsd-kind-icon">stack<wbr>Trace<wbr>Limit</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="WrapperError.html#message" class="tsd-kind-icon">message</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="WrapperError.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="WrapperError.html#stack" class="tsd-kind-icon">stack</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external"><a href="WrapperError.html#prepareStackTrace" class="tsd-kind-icon">prepare<wbr>Stack<wbr>Trace</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external"><a href="WrapperError.html#stackTraceLimit" class="tsd-kind-icon">stack<wbr>Trace<wbr>Limit</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-inherited tsd-is-external">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external"><a href="wrappererror.html#capturestacktrace" class="tsd-kind-icon">capture<wbr>Stack<wbr>Trace</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external"><a href="WrapperError.html#captureStackTrace" class="tsd-kind-icon">capture<wbr>Stack<wbr>Trace</a></li>
 							</ul>
 						</section>
 					</div>
@@ -120,14 +120,14 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Wrapper<wbr>Error<span class="tsd-signature-symbol">(</span>wrapperCommand<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, installInstructions<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="wrappererror.html" class="tsd-signature-type" data-tsd-kind="Class">WrapperError</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Wrapper<wbr>Error<span class="tsd-signature-symbol">(</span>wrapperCommand<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, installInstructions<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="WrapperError.html" class="tsd-signature-type" data-tsd-kind="Class">WrapperError</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides Error.constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/631f457/src/wrapper.ts#L18">src/wrapper.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/malept/cross-spawn-windows-exe/blob/a509c25/src/wrapper.ts#L23">src/wrapper.ts:23</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -135,17 +135,21 @@
 								<li>
 									<h5>wrapperCommand: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The wrapper that tried to be executed</p>
+										<div class="lead">
+											<p>The wrapper that tried to be executed</p>
+										</div>
 									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> installInstructions: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Instructions on how to install the wrapper</p>
+										<div class="lead">
+											<p>Instructions on how to install the wrapper</p>
+										</div>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="wrappererror.html" class="tsd-signature-type" data-tsd-kind="Class">WrapperError</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="WrapperError.html" class="tsd-signature-type" data-tsd-kind="Class">WrapperError</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -186,7 +190,7 @@
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external">
-					<a name="preparestacktrace" class="tsd-anchor"></a>
+					<a name="prepareStackTrace" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagOptional">Optional</span> prepare<wbr>Stack<wbr>Trace</h3>
 					<div class="tsd-signature tsd-kind-icon">prepare<wbr>Stack<wbr>Trace<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>err<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Error</span>, stackTraces<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">CallSite</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
@@ -195,16 +199,6 @@
 							<li>Defined in node_modules/@types/node/globals.d.ts:11</li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Optional override for formatting stack traces</p>
-						</div>
-						<dl class="tsd-comment-tags">
-							<dt>see</dt>
-							<dd><p><a href="https://v8.dev/docs/stack-trace-api#customizing-stack-traces">https://v8.dev/docs/stack-trace-api#customizing-stack-traces</a></p>
-							</dd>
-						</dl>
-					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
@@ -214,6 +208,11 @@
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>Optional override for formatting stack traces</p>
+											</div>
+										</div>
 										<h4 class="tsd-parameters-title">Parameters</h4>
 										<ul class="tsd-parameters">
 											<li>
@@ -231,7 +230,7 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external">
-					<a name="stacktracelimit" class="tsd-anchor"></a>
+					<a name="stackTraceLimit" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> stack<wbr>Trace<wbr>Limit</h3>
 					<div class="tsd-signature tsd-kind-icon">stack<wbr>Trace<wbr>Limit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
@@ -245,7 +244,7 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-inherited tsd-is-external">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external">
-					<a name="capturestacktrace" class="tsd-anchor"></a>
+					<a name="captureStackTrace" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> capture<wbr>Stack<wbr>Trace</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">capture<wbr>Stack<wbr>Trace<span class="tsd-signature-symbol">(</span>targetObject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span>, constructorOpt<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
@@ -291,65 +290,65 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class">
-						<a href="wrappererror.html" class="tsd-kind-icon">Wrapper<wbr>Error</a>
+						<a href="WrapperError.html" class="tsd-kind-icon">Wrapper<wbr>Error</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-								<a href="wrappererror.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="WrapperError.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="wrappererror.html#message" class="tsd-kind-icon">message</a>
+								<a href="WrapperError.html#message" class="tsd-kind-icon">message</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="wrappererror.html#name" class="tsd-kind-icon">name</a>
+								<a href="WrapperError.html#name" class="tsd-kind-icon">name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="wrappererror.html#stack" class="tsd-kind-icon">stack</a>
+								<a href="WrapperError.html#stack" class="tsd-kind-icon">stack</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external">
-								<a href="wrappererror.html#preparestacktrace" class="tsd-kind-icon">prepare<wbr>Stack<wbr>Trace</a>
+								<a href="WrapperError.html#prepareStackTrace" class="tsd-kind-icon">prepare<wbr>Stack<wbr>Trace</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external">
-								<a href="wrappererror.html#stacktracelimit" class="tsd-kind-icon">stack<wbr>Trace<wbr>Limit</a>
+								<a href="WrapperError.html#stackTraceLimit" class="tsd-kind-icon">stack<wbr>Trace<wbr>Limit</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external">
-								<a href="wrappererror.html#capturestacktrace" class="tsd-kind-icon">capture<wbr>Stack<wbr>Trace</a>
+								<a href="WrapperError.html#captureStackTrace" class="tsd-kind-icon">capture<wbr>Stack<wbr>Trace</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-type-alias">
-						<a href="../modules.html#crossspawnexeoptions" class="tsd-kind-icon">Cross<wbr>Spawn<wbr>Exe<wbr>Options</a>
+						<a href="../modules.html#CrossSpawnExeOptions" class="tsd-kind-icon">Cross<wbr>Spawn<wbr>Exe<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="../modules.html#determinewrapperfunction" class="tsd-kind-icon">Determine<wbr>Wrapper<wbr>Function</a>
+						<a href="../modules.html#DetermineWrapperFunction" class="tsd-kind-icon">Determine<wbr>Wrapper<wbr>Function</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../modules.html#canrunwindowsexenatively" class="tsd-kind-icon">can<wbr>Run<wbr>Windows<wbr>Exe<wbr>Natively</a>
+						<a href="../modules.html#canRunWindowsExeNatively" class="tsd-kind-icon">can<wbr>Run<wbr>Windows<wbr>Exe<wbr>Natively</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../modules.html#dotnetdependencyinstallinstructions" class="tsd-kind-icon">dot<wbr>Net<wbr>Dependency<wbr>Install<wbr>Instructions</a>
+						<a href="../modules.html#dotNetDependencyInstallInstructions" class="tsd-kind-icon">dot<wbr>Net<wbr>Dependency<wbr>Install<wbr>Instructions</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../modules.html#exedependencyinstallinstructions" class="tsd-kind-icon">exe<wbr>Dependency<wbr>Install<wbr>Instructions</a>
+						<a href="../modules.html#exeDependencyInstallInstructions" class="tsd-kind-icon">exe<wbr>Dependency<wbr>Install<wbr>Instructions</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../modules.html#is64bitarch" class="tsd-kind-icon">is64<wbr>Bit<wbr>Arch</a>
+						<a href="../modules.html#is64BitArch" class="tsd-kind-icon">is64<wbr>Bit<wbr>Arch</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../modules.html#normalizepath" class="tsd-kind-icon">normalize<wbr>Path</a>
+						<a href="../modules.html#normalizePath" class="tsd-kind-icon">normalize<wbr>Path</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="../modules.html#spawn" class="tsd-kind-icon">spawn</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../modules.html#spawndotnet" class="tsd-kind-icon">spawn<wbr>Dot<wbr>Net</a>
+						<a href="../modules.html#spawnDotNet" class="tsd-kind-icon">spawn<wbr>Dot<wbr>Net</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../modules.html#spawnexe" class="tsd-kind-icon">spawn<wbr>Exe</a>
+						<a href="../modules.html#spawnExe" class="tsd-kind-icon">spawn<wbr>Exe</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../modules.html#spawnwrapperfromfunction" class="tsd-kind-icon">spawn<wbr>Wrapper<wbr>From<wbr>Function</a>
+						<a href="../modules.html#spawnWrapperFromFunction" class="tsd-kind-icon">spawn<wbr>Wrapper<wbr>From<wbr>Function</a>
 					</li>
 				</ul>
 			</nav>
