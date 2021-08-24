@@ -41,6 +41,7 @@
   },
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@malept/eslint-config": "^1.1.2",
     "@types/node": "^16.0.0",
     "@types/sinon": "^10.0.0",
     "@types/which": "^2.0.0",
@@ -75,26 +76,9 @@
     "timeout": "3m"
   },
   "eslintConfig": {
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "ecmaVersion": "2019",
-      "sourceType": "module"
-    },
-    "plugins": [
-      "@typescript-eslint",
-      "eslint-plugin-tsdoc"
-    ],
     "extends": [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/recommended",
-      "plugin:ava/recommended",
-      "plugin:import/errors",
-      "plugin:import/warnings",
-      "plugin:import/typescript",
-      "plugin:node/recommended",
-      "plugin:prettier/recommended",
-      "plugin:promise/recommended",
-      "prettier"
+      "@malept/eslint-config/typescript",
+      "plugin:node/recommended"
     ],
     "rules": {
       "node/no-unsupported-features/es-syntax": [
@@ -104,9 +88,7 @@
             "modules"
           ]
         }
-      ],
-      "strict": "error",
-      "tsdoc/syntax": "warn"
+      ]
     },
     "overrides": [
       {
