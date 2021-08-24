@@ -15,9 +15,6 @@ jobs:
       - name: Fix git checkout line endings
         run: git config --global core.autocrlf input
       - uses: actions/checkout@v2
-      - name: Install platform dependencies
-        shell: bash
-        run: ci/install_dependencies.sh
       - name: Setup Node.js
         uses: actions/setup-node@v2.4.0
         with:
