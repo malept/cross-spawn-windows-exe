@@ -76,6 +76,8 @@ jobs:
           CI_OS: ${{ matrix.os }}
           NODE_VERSION: ${{ matrix.node-version }}
 
+  # Windows Server is not going to support WSL 2 any time soon.
+  # See: https://github.com/microsoft/WSL/issues/6301
   build-wsl1:
     needs: lint
     defaults:
