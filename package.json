@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
-    "@malept/eslint-config": "^1.1.2",
+    "@malept/eslint-config": "^1.2.0",
     "@types/node": "^16.0.0",
     "@types/sinon": "^10.0.0",
     "@types/which": "^2.0.0",
@@ -77,19 +77,8 @@
   },
   "eslintConfig": {
     "extends": [
-      "@malept/eslint-config/typescript",
-      "plugin:node/recommended"
+      "@malept/eslint-config/typescript"
     ],
-    "rules": {
-      "node/no-unsupported-features/es-syntax": [
-        "error",
-        {
-          "ignores": [
-            "modules"
-          ]
-        }
-      ]
-    },
     "overrides": [
       {
         "files": "test/*.ts",
@@ -97,17 +86,7 @@
           "import/no-named-as-default-member": "off"
         }
       }
-    ],
-    "settings": {
-      "node": {
-        "tryExtensions": [
-          ".js",
-          ".json",
-          ".node",
-          ".ts"
-        ]
-      }
-    }
+    ]
   },
   "eslintIgnore": [
     "dist"
