@@ -42,7 +42,7 @@
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@malept/eslint-config": "^1.2.0",
-    "@types/node": "^17.0.0",
+    "@types/node": "^18.0.3",
     "@types/sinon": "^10.0.0",
     "@types/which": "^2.0.0",
     "@typescript-eslint/eslint-plugin": "^4.3.0",
