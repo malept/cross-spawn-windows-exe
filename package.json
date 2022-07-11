@@ -47,7 +47,7 @@
     "@types/which": "^2.0.0",
     "@typescript-eslint/eslint-plugin": "^4.3.0",
     "@typescript-eslint/parser": "^4.3.0",
-    "ava": "^3.9.0",
+    "ava": "^4.3.1",
     "eslint": "^7.3.0",
     "eslint-config-prettier": "^8.0.0",
     "eslint-plugin-ava": "^12.0.0",
